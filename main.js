@@ -52,4 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 4. Gallery Navigation
+    const galleryGrid = document.querySelector('.gallery-grid');
+    const prevBtn = document.querySelector('.gallery-nav.prev');
+    const nextBtn = document.querySelector('.gallery-nav.next');
+
+    if (galleryGrid && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            const itemWidth = galleryGrid.querySelector('.gallery-item').offsetWidth + 24; 
+            galleryGrid.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const itemWidth = galleryGrid.querySelector('.gallery-item').offsetWidth + 24; 
+            galleryGrid.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+    }
 });
