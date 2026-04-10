@@ -127,28 +127,30 @@
                 
                 <div class="contact-info" id="kontakt">
                     <h3>Máte zájem? Napište nám!</h3>
-                    <p>Rádi s vámi domluvíme termín nebo zodpovíme dotazy.</p>
+                    <p>Rádi s vámi domluvíme termín nebo zodpovíme dotazy. Můžete nám zavolat na <strong><a href="tel:+420731151045">(+420) 731 151 045</a></strong>, nebo využijte formulář níže.</p>
                     
-                    <form class="contact-form glass" action="#" method="POST" onsubmit="event.preventDefault(); alert('Vaše zpráva byla zpracována.');">
+                    <form class="contact-form glass" action="https://formsubmit.co/ullmann@outlook.cz" method="POST">
+                        <input type="hidden" name="_subject" value="Nová poptávka - pronajem-chaty.eu">
+                        <input type="hidden" name="_template" value="table">
                         <div class="input-group">
                             <label for="name">Jméno a příjmení</label>
-                            <input type="text" id="name" placeholder="Jan Novák" required>
+                            <input type="text" id="name" name="Jméno" placeholder="Jan Novák" required>
                         </div>
                         <div class="input-group">
                             <label for="email">E-mail</label>
-                            <input type="email" id="email" placeholder="jan.novak@email.cz" required>
+                            <input type="email" id="email" name="email" placeholder="jan.novak@email.cz" required>
                         </div>
                         <div class="input-group">
                             <label for="rental-type">Zájem o typ pronájmu</label>
-                            <select id="rental-type" required>
+                            <select id="rental-type" name="Typ_pronajmu" required>
                                 <option value="" disabled selected>Zvolte, prosím...</option>
-                                <option value="kratkodoby">Krátkodobý pronájem</option>
-                                <option value="dlouhodoby">Dlouhodobý pronájem</option>
+                                <option value="Krátkodobý pronájem">Krátkodobý pronájem</option>
+                                <option value="Dlouhodobý pronájem">Dlouhodobý pronájem</option>
                             </select>
                         </div>
                         <div class="input-group">
                             <label for="message">Zpráva</label>
-                            <textarea id="message" rows="4" placeholder="Dobrý den, měl bych zájem o pronájem chaty na víkend..." required></textarea>
+                            <textarea id="message" name="Zprava" rows="4" placeholder="Dobrý den, měl bych zájem o pronájem chaty na víkend..." required></textarea>
                         </div>
                         <button type="submit" class="btn-primary-form">Odeslat zprávu</button>
                     </form>
