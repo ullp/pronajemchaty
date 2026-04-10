@@ -551,6 +551,26 @@ ul {
     margin-bottom: 1.5rem;
 }
 
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    appearance: auto;
+    -webkit-appearance: auto;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .input-group label {
     display: block;
     margin-bottom: 0.5rem;
